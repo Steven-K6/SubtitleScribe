@@ -34,5 +34,5 @@
 
 - [Task] (Worked on VCS and PM board. Did research on how to set everything up)
 - Start Time: [10:30pm]
-- End Time: []
-- Total Hours Spent: []
+- End Time: [2:30am]
+- Total Hours Spent: [4]
