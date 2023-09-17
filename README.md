@@ -12,3 +12,8 @@
 
 ## Project Management 
 - **Project Board**: You can track the project's progress and tasks on the [Project Management Board] (https://github.com/users/Steven-K6/projects/11/views/1)
+
+## Future Releases 
+- **Subtitle Language**: Adding an option to select the preferred subtitle language.
+- **Subtitle Styling**: Allowing users to customize the format, size and color of the subtitles.
+- **Subtitle Editing**: Enabling the user to preview and edit the subtitles.
