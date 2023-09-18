@@ -37,7 +37,7 @@
 - End Time: [2:30am]
 - Total Hours Spent: [4]
 
--  ### [9/17/23]
+ ### [9/17/23]
 
 - [Task] (Worked on README file as well as started working on the Frontend)
 - Start Time: [4:30pm]
