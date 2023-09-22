@@ -43,3 +43,11 @@
 - Start Time: [4:30pm]
 - End Time: [6:30pm]
 - Total Hours Spent: [2]
+
+ ### [9/21/23]
+
+- [Task] (added file upload functionality as well as set up node.js application
+  that uses express.js framework and the multer middleware for handling uploads)
+- Start Time: [6:30pm]
+- End Time: [12:30am]
+- Total Hours Spent: [6]
