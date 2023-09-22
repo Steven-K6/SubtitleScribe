@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Video Upload</title>
+    <style></style>
+</head>
+<body>
+    <h1>SubtitleScribe</h1>
+    <h2>Upload a Video</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+<!--specifies the URL where the form data should be submitted when the user
+submits the form. POST specifies the HTTP method to be used when submitting
+the form -->
+
+    <input type="file" name="video" accept="video/*">
+<!--allows users to select and upload a file from their local system.-->
+
+    <input type="submit" value="Upload">
+    </form>
+    <h2>Uploaded Video</h2>
+    <video controls width="600">
+<!--displays the uploaded video-->
+
+        <source src="/video" type="video.mp4">
+    </video> 
+</body>
+</html>
