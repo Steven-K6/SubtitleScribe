@@ -51,3 +51,17 @@
 - Start Time: [6:30pm]
 - End Time: [12:30am]
 - Total Hours Spent: [6]
+
+### [9/25/23]
+
+- [Task] (used video tag and JavaScript to show the uploaded video on the same page where the upload form is)
+- Start Time: [3:00pm]
+- End Time: [7:00pm]
+- Total Hours Spent: [4]
+
+### [9/27/23]
+
+- [Task] (Added more in-depth comments on the code as prep for the 1st demo)
+- Start Time: [11:30pm]
+- End Time: [2:30am]
+- Total Hours Spent: [3]
