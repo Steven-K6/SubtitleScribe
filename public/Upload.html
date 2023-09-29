@@ -2,6 +2,19 @@
 <html>
 <head>
     <title>Video Upload</title>
+<style>
+    #videoContainer{
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    #uploadedVideo {
+        width: 100%;
+        height: auto;
+    }
+</style>
+<!--Added CSS properties that will allow the video to be displayed 
+in a specific conatainer, that will also
+allow us to adjust the size as needed-->
 
 </head>
 <body>
@@ -19,12 +32,18 @@
         process when you click it-->
     </form>
 
+
+<div id="videoContainer">
+    <!--added a container for the video so its size can be changed-->
+
     <video id="uploadedVideo" controls style="display: none;">
         Your browser does not support the video tag.
     </video>
     <!--Defines an HTML video element. The controls attribute
     adds video player controls like play and pause. If the browser
     doesnt support the video element, the message will be displayed -->
+</div>
+
     <script src="/script.js"></script>
 </body>
 </html>
