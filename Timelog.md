@@ -65,3 +65,10 @@
 - Start Time: [11:30pm]
 - End Time: [2:30am]
 - Total Hours Spent: [3]
+
+### [9/28/23]
+
+- [Task] (added CSS properties that will allow me to adjust the size of the video displayed as needed, as well as added additional comments under the code)
+- Start Time: [4:30pm]
+- End Time: [8:30pm]
+- Total Hours Spent: [4]
