@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Video Upload</title>
-    <style></style>
+
 </head>
 <body>
-    <h1>SubtitleScribe</h1>
-    <h2>Upload a Video</h2>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-<!--specifies the URL where the form data should be submitted when the user
-submits the form. POST specifies the HTTP method to be used when submitting
-the form -->
-
-    <input type="file" name="video" accept="video/*">
-<!--allows users to select and upload a file from their local system.-->
-
-    <input type="submit" value="Upload">
+    <h1>Upload a Video</h1>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <!--Defines an HTML form with the ID "uploadForm" and sets the 
+            enctype to "multipart/form-data" which is used for file 
+            uploads -->
+        <input type="file" name="video" accept="video/*" required>
+        <!--Adds a file input field to the form. You would use this
+        to select a video file to upload. It is marked as required, so
+        a file must be selected before submitting the form -->
+        <button type="button" id="uploadButton">Upload</button>
+        <!--Creates a button element. Used to trigger the file upload
+        process when you click it-->
     </form>
-    <h2>Uploaded Video</h2>
-    <video controls width="600">
-<!--displays the uploaded video-->
 
-        <source src="/video" type="video.mp4">
-    </video> 
+    <video id="uploadedVideo" controls style="display: none;">
+        Your browser does not support the video tag.
+    </video>
+    <!--Defines an HTML video element. The controls attribute
+    adds video player controls like play and pause. If the browser
+    doesnt support the video element, the message will be displayed -->
+    <script src="/script.js"></script>
 </body>
 </html>
