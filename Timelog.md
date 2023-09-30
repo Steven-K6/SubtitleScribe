@@ -72,3 +72,10 @@
 - Start Time: [4:30pm]
 - End Time: [8:30pm]
 - Total Hours Spent: [4]
+
+### [9/29/23]
+
+- [Task] (Started doing research on how to integrate a library that will handle extracting audio from an uploaded video)
+- Start Time: [11:30pm]
+- End Time: [1:30am]
+- Total Hours Spent: [2]
