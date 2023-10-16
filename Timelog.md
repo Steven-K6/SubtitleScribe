@@ -79,3 +79,31 @@
 - Start Time: [11:30pm]
 - End Time: [1:30am]
 - Total Hours Spent: [2]
+
+### [10/9/23]
+
+- [Task] (Started working on integrating FFmpeg to handle audio extraction from any uploaded video)
+- Start Time: [9:00pm]
+- End Time: [12:00am]
+- Total Hours Spent: [3]
+
+### [10/12/23]
+
+- [Task] (worked on integrating FFmpeg to handle audio extraction from any uploaded video)
+- Start Time: [4:30pm]
+- End Time: [7:30pm]
+- Total Hours Spent: [3]
+
+### [10/14/23]
+
+- [Task] (worked on integrating FFmpeg to handle audio extraction from any uploaded video)
+- Start Time: [10:00pm]
+- End Time: [3:00am]
+- Total Hours Spent: [5]
+
+### [10/15/23]
+
+- [Task] (worked on integrating FFmpeg to handle audio extraction from any uploaded video as well as prepared for the demo)
+- Start Time: [5:00pm]
+- End Time: [10;00pm]
+- Total Hours Spent: [5]
