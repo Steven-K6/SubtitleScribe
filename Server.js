@@ -7,6 +7,10 @@ const multer = require('multer');
 const path = require('path');
 /* imports the Node.js module 'path' which allows you to work 
 with file and directory paths */
+
+const ffmpeg = require('fluent-ffmpeg');
+/* imports the ffmpeg libary which works with audio and video files */
+
 const app = express();
 /* Creates an instance of the Express.js application by invoking
 the express() function. The app 'object' is used to define routes, 
@@ -44,6 +48,9 @@ Allows web browsers to access these files directly */
 app.use('/video', express.static('uploads'));
 //serves uploaded videos from the 'uploads' directory
 
+app.use('/audio', express.static('audio'));
+//serves static files from the 'audio' directory
+
 app.post('/upload', upload.single('video'), (req, res) => {
   /* defines a route that handles HTTP post requests.
   upload.single('video') is a middleware provided by Multer, 
@@ -55,10 +62,31 @@ app.post('/upload', upload.single('video'), (req, res) => {
         /* checks if there is a file upload in the request.
         If no file was uploaded the message will be displayed */
     }
+
+const inputVideoFilePath = `uploads/${req.file.filename}`;
+/* constructs the path to the uploaded video file. Path to the input */
+
+const outputAudioFilePath = `audio/${req.file.filename.replace(/\.[^/.]+$/, '')}.mp3`; // Output audio format is MP3
+/* constructs the path to the output audio file. Its a path to the mp3 
+audio file in the 'audio' directory */
+
+ffmpeg() //uses `fluent-ffmpeg` library to perform audio extraction
+    .input(inputVideoFilePath) //specifies that the input video will be processed
+    .audioCodec('libmp3lame') // specifies the audio codec
+    .toFormat('mp3') // sets the output to mp3
+    .on('end', () => {
+        console.log('Audio extraction and conversion complete.');
+    })
+    .on('error', (err) => {
+        console.error('Error extracting audio:', err);
+    })
+    //registers an event handler that is triggered when the process is complete
+
+    .save(outputAudioFilePath);
+//specifies the path where the output audio files should be saved
+
     res.send(`/video/${req.file.filename}`);
-;});
- /*checks if the video was uploaded. If successful, sends an HTML
-    response containing a link to the uploaded video*/
+});
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/upload.html');
