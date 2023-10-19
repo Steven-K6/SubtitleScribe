@@ -105,5 +105,12 @@
 
 - [Task] (worked on integrating FFmpeg to handle audio extraction from any uploaded video as well as prepared for the demo)
 - Start Time: [5:00pm]
-- End Time: [10;00pm]
+- End Time: [10:00pm]
 - Total Hours Spent: [5]
+
+### [10/18/23]
+
+- [Task] (Did some research on how to integrate the speech-to-text service(google-cloud) )
+- Start Time: [8:00pm]
+- End Time: [11:00pm]
+- Total Hours Spent: [3]
