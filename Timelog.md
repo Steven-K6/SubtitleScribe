@@ -128,3 +128,10 @@
 - Start Time: [11:00pm]
 - End Time: [2:00am]
 - Total Hours Spent: [3]
+
+### [11/5/23]
+
+- [Task] (Worked on the presentation slides)
+- Start Time: [4:00pm]
+- End Time: [8:00pm]
+- Total Hours Spent: [4]
