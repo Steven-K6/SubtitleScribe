@@ -135,3 +135,10 @@
 - Start Time: [4:00pm]
 - End Time: [8:00pm]
 - Total Hours Spent: [4]
+
+### [11/15/23]
+
+- [Task] (Worked on the Google speech-to-text integration)
+- Start Time: [4:00pm]
+- End Time: [7:00pm]
+- Total Hours Spent: [3]
