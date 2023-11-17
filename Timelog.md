@@ -142,3 +142,10 @@
 - Start Time: [4:00pm]
 - End Time: [7:00pm]
 - Total Hours Spent: [3]
+
+### [11/16/23]
+
+- [Task] (Set up the Google speech-to-text integration, however I was only able to do mp3 files instead of mp4 as well as any files less than 1 min)
+- Start Time: [4:00pm]
+- End Time: [8:00pm]
+- Total Hours Spent: [4]
