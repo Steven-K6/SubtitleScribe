@@ -149,3 +149,11 @@
 - Start Time: [4:00pm]
 - End Time: [8:00pm]
 - Total Hours Spent: [4]
+
+### [11/22/23]
+
+- [Task] (added the .gitignore directory to hide the API Key and credentials as well as started to integrate the Google Cloud Storage to allow files longer than 1 min to be transcribed)
+- Start Time: [10:30pm]
+- End Time: [2:30am]
+- Total Hours Spent: [4]
+
