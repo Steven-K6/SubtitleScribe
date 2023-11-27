@@ -1,3 +1,7 @@
+require('dotenv').config();
+/* loads configuration settings from an .env file. This is used to store sensitive
+information seperately from the code*/
+
 const express = require('express');
 // imports express.js framework which is used for web applications
 
@@ -40,6 +44,18 @@ const upload = multer({ storage: storage });
 /* configures Multer for handling file uploads. The storage object
 defines how uploaded files should be stored, which was previously
 explained */
+
+const { SpeechClient } = require('@google-cloud/speech');
+//imports SpeechClient class from the google-cloud/speach package
+// the SpeechClient class provides methods for interacting with the Speech to text API
+
+const speechClient = new SpeechClient({
+keyFilename: process.env.GOOGLE_APPLICATION_CREDENTIALS,
+});
+/* creates a new instance of the SpeechClient class.
+The keyFilename is set to refer to an environment variable that should
+contain the path to the JSON file containing the Google Cloud service
+account key. */
 
 app.use(express.static('public'));
 /* serves static files from the 'public' directory. (html,css javascript)
@@ -87,6 +103,62 @@ ffmpeg() //uses `fluent-ffmpeg` library to perform audio extraction
 
     res.send(`/video/${req.file.filename}`);
 });
+
+app.post('/transcribe-audio', upload.single('audio'), async (req, res) => {
+    //Checks if an audio file was uploaded
+    if (!req.file) {
+      res.status(400).send('No audio file uploaded.');
+      return;
+    }
+  
+    const inputFilePath = `uploads/${req.file.filename}`;
+    // Creates a path to the uploaded audio file
+  
+    const audioContent = await readFile(inputFilePath);
+    // reads the uploaded audio file
+  
+    const audio = {
+      content: audioContent.toString('base64'),
+    };
+    //prepares the audio content to be sent to the Speech-to-Text API
+  
+    const request = {
+      audio: audio,
+      config: {
+        encoding: 'MP3', 
+        sampleRateHertz: 16000, 
+        languageCode: 'en-US', 
+      },
+    };
+    // configures the transcription request
+  
+    try {
+      const [response] = await speechClient.recognize(request);
+      // sends the transcription request to the API
+      
+      const transcription = response.results[0].alternatives[0].transcript;
+    // logs the transcription response
+
+      res.status(200).json({ transcription });
+    } catch (error) {
+      console.error('Error transcribing audio:', error);
+      res.status(500).json('Error transcribing audio.');
+    }
+  });
+  
+  function readFile(filePath) {
+    const fs = require('fs');
+    return new Promise((resolve, reject) => {
+      fs.readFile(filePath, (err, data) => {
+        if (err) {
+          reject(err);
+        } else {
+          resolve(data);
+        }
+      });
+    });
+  }
+// Function to read the file content asynchronously
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/upload.html');

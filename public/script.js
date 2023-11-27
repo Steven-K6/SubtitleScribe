@@ -48,3 +48,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
+    async function transcribe() {
+        const audioInput = document.getElementById('audioInput');
+        const transcriptionDiv = document.getElementById('transcription');
+      //references HTML elements by their IDs
+
+        const audioFile = audioInput.files[0];
+        if (!audioFile) {
+          alert('Please select an audio file.');
+          return;
+        }
+        //checks if there is a selected audio file in the file input element
+      
+        const formData = new FormData();
+        formData.append('audio', audioFile);
+      
+        try {
+          const response = await fetch('/transcribe-audio', {
+            method: 'POST',
+            body: formData,
+          });
+      
+        const { transcription } = await response.json();
+        transcriptionDiv.textContent = transcription;
+} catch (error) {
+    console.error('Unexpected error:', error);
+    alert('Unexpected error during transcription.');
+    }
+}

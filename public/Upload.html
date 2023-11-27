@@ -43,6 +43,17 @@ allow us to adjust the size as needed-->
     doesnt support the video element, the message will be displayed -->
 </div>
 
+<input type="file" id="audioInput" accept="audio/*">
+<!--Creates a file input element where users can select an audio file fron their
+device. The 'accept' attribute means that the input only accepts audio files-->
+
+<button onclick="transcribe()">Transcribe</button>
+<!--Creates a button. The onclick attribute is set to transcibe(), which means
+when the button is clicked the JavaScript function named 'transcibe' will be called-->
+
+<div id="transcription"></div>
+<!--Creates an empty <div> element which can be used to display the transcibed text-->
+
     <script src="/script.js"></script>
 </body>
 </html>
