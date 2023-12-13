@@ -1,57 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Upload</title>
-<style>
-    #videoContainer{
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    #uploadedVideo {
-        width: 100%;
-        height: auto;
-    }
-</style>
-<!--Added CSS properties that will allow the video to be displayed 
-in a specific conatainer, that will also
-allow us to adjust the size as needed-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
 
+        nav {
+            background-color: royalblue;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        nav img {
+            height: 40px;
+            cursor: pointer;
+        
+        }
+        #main-content {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 65px;  
+            text-decoration: underline;      
+        }
+       
+        #videoContainer {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        #uploadedVideo {
+            width: 100%;
+            height: auto;
+        }
+
+        #subtitleDisplay {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            display: none;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #transcription {
+        text-align: center;
+        font-size: 18px;
+        outline-style: solid;
+    }
+    </style>
+    <!--Added CSS properties -->
 </head>
 <body>
-    <h1>Upload a Video</h1>
+    <nav>
+        <a href="home.html"><img src="SubtitleScribe_logo.png" alt="Logo"></a>
+    </nav>
+
+    <h2>Upload a Video</h2>
     <form id="uploadForm" enctype="multipart/form-data">
-        <!--Defines an HTML form with the ID "uploadForm" and sets the 
+         <!--Defines an HTML form with the ID "uploadForm" and sets the 
             enctype to "multipart/form-data" which is used for file 
             uploads -->
         <input type="file" name="video" accept="video/*" required>
         <!--Adds a file input field to the form. You would use this
         to select a video file to upload. It is marked as required, so
         a file must be selected before submitting the form -->
+
         <button type="button" id="uploadButton">Upload</button>
-        <!--Creates a button element. Used to trigger the file upload
+         <!--Creates a button element. Used to trigger the file upload
         process when you click it-->
     </form>
 
-<div id="videoContainer">
-    <!--added a container for the video so its size can be changed-->
-
-    <video id="uploadedVideo" controls style="display: none;">
-        Your browser does not support the video tag.
-    </video>
-    <!--Defines an HTML video element. The controls attribute
+    <div id="videoContainer">
+        <!--added a container for the video so its size can be changed-->
+        <video id="uploadedVideo" controls>
+            Your browser does not support the video tag.
+        </video>
+        <!--Defines an HTML video element. The controls attribute
     adds video player controls like play and pause. If the browser
     doesnt support the video element, the message will be displayed -->
-</div>
+        <div id="subtitleDisplay"></div>
+    </div>
 
-<input type="file" id="audioInput" accept="audio/*">
-<!--Creates a file input element where users can select an audio file fron their
+    <h2>Transcribe Here</h2>
+    <form id="transcribeForm" enctype="multipart/form-data"></form>
+    <input type="file" id="audioInput" accept="audio/*" >
+    <!--Creates a file input element where users can select an audio file fron their
 device. The 'accept' attribute means that the input only accepts audio files-->
 
-<button onclick="transcribe()">Transcribe</button>
-<!--Creates a button. The onclick attribute is set to transcibe(), which means
+    <button id="transcribeButton" onclick="transcribe()">Transcribe</button>
+    <!--Creates a button. The onclick attribute is set to transcibe(), which means
 when the button is clicked the JavaScript function named 'transcibe' will be called-->
 
-<div id="transcription"></div>
+    <div id="transcription"></div>
 <!--Creates an empty <div> element which can be used to display the transcibed text-->
 
     <script src="/script.js"></script>

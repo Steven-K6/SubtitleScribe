@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SubtitleScribe</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            background-color: royalblue; 
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav img {
+            height: 40px; 
+            cursor: pointer;
+        }
+
+        nav button {
+            float: right;
+            margin-right: 10px;
+            padding: 8px 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+       button {
+            float: center;
+            margin-right: 10px;
+            padding: 8px 16px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+
+       }
+
+        #main-content {
+            margin-top: 60px; 
+            padding: 20px;
+            text-align: center;
+        }
+
+        #logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #logo-container img {
+            height: 300px; 
+            margin-right: 20px;
+        }
+
+        #speech-to-text {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+            margin-top: 20px
+        }
+        #speech-to-text img {
+            width: 450px; 
+            height: auto; 
+        }
+        #site-info {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        #site-info h2 {
+            margin-bottom: 20px;
+            font-size: 80px;
+            margin-top: 80px;
+        }
+        .side-image1 {
+            width: 45%; 
+            margin: 10px;
+            rotate: 90deg;
+            position: absolute;
+            bottom: 250px;
+            left: -120px
+        }
+        .side-image2 {
+            width: 45%; 
+            margin: 10px;
+            rotate: 90deg;
+            position: absolute;
+            bottom: 250px;
+            right: -120px
+        }
+       
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="home.html"><img src="SubtitleScribe_logo.png" alt="Logo"></a>
+    <button onclick="location.href='upload.html'">Get Started</button>
+</nav>
+
+<img class="side-image1" src="audio1.jpeg" alt="Audio Image">
+<div id="main-content">
+    <div id="logo-container">
+        <img src="SubtitleScribe_logo.png" alt="Logo">
+        
+    </div>
+    <div id="site-info">
+        <h2>SubtitleScribe</h2>
+        <p>Bringing Voices to Life by Turning Sound into Text</p>
+        <button onclick="location.href='upload.html'">Get Started</button>
+    </div>
+</div>
+<img class="side-image2" src="audio1.jpeg" alt="Audio Image">
+<div id="speech-to-text">
+    <img src="speech-to-text.png" alt="showcase">
+</div>
+    
+</body>
+</html>
