@@ -157,3 +157,78 @@
 - End Time: [2:30am]
 - Total Hours Spent: [4]
 
+### [11/26/23]
+
+- [Task] (Started working in integration of Google Cloud Storage)
+- Start Time: [5:30pm]
+- End Time: [7:30pm]
+- Total Hours Spent: [2]
+
+### [11/27/23]
+
+- [Task] (worked on the integration of Google Cloud Storage)
+- Start Time: [5:30pm]
+- End Time: [6:30pm]
+- Total Hours Spent: [1]
+
+### [11/29/23]
+
+- [Task] (worked on the integration of Google Cloud Storage)
+- Start Time: [3:30pm]
+- End Time: [6:30pm]
+- Total Hours Spent: [3]
+
+### [12/3/23]
+
+- [Task] (Finished the integration of Google Cloud Storage for upload and extraction)
+- Start Time: [9:30pm]
+- End Time: [2:30am]
+- Total Hours Spent: [5]
+
+### [12/4/23]
+
+- [Task] (Started working on the integration of Google Cloud Storage for transcription)
+- Start Time: [8:30pm]
+- End Time: [1:30am]
+- Total Hours Spent: [5]
+  
+### [12/6/23]
+
+- [Task] (worked on the integration of Google Cloud Storage for transcription)
+- Start Time: [4:30pm]
+- End Time: [6:30pm]
+- Total Hours Spent: [2]
+
+### [12/7/23]
+
+- [Task] (worked on the integration of Google Cloud Storage for transcription)
+- Start Time: [5:30pm]
+- End Time: [8:30pm]
+- Total Hours Spent: [3]
+
+### [12/9/23]
+
+- [Task] (worked on the Front-End design)
+- Start Time: [9:30pm]
+- End Time: [3:30am]
+- Total Hours Spent: [6]
+
+### [12/10/23]
+
+- [Task] (Fully integrated the Google Cloud Storage for uploads, extraction and transcription)
+- Start Time: [4:30pm]
+- End Time: [8:30pm]
+- Total Hours Spent: [4]
+- [Task] (Started working on the presentation slides)
+- Start Time: [10:30pm]
+- End Time: [2:30am]
+- Total Hours Spent: [4]
+
+### [12/11/23]
+
+- [Task] (Finished presentation slides and worked on the recorded presentation)
+- Start Time: [3:30pm]
+- End Time: [6:30pm]
+- Start Time: [9:30pm]
+- End Time: [3:30am]
+- Total Hours Spent: [9]
