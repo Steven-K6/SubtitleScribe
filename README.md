@@ -11,7 +11,7 @@
 - Upon entering the website, you will be presented with the title and a button that reads 'Get Started'. After selecting it, you will be directed  to a page where you can upload a video. After uploading a video, the audio will be extracted and the subtitles will be displayed under the video.
 
 ## Project Architecture
-- The application uses Google Cloud services. Google Cloud Storage is used for efficient storage, while the Speech-toText API handles transcription.
+- The application uses Google Cloud services. Google Cloud Storage is used for storage, while the Speech-to-Text API handles transcription.
 
 ## Screenshots
 
