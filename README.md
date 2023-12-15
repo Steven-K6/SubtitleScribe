@@ -16,7 +16,7 @@
 ## Project Management 
 - **Project Board**: You can track the project's progress and tasks on the [Project Management Board] (https://github.com/users/Steven-K6/projects/11/views/1)
 
-## Prerewuisites
+## Prerequisites
 - To use this code, follow these steps:
   1. **Google Cloud Account:** Create an account on [Google Cloud Platform](https://console.cloud.google.com/) if you don't have one.
 
