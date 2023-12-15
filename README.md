@@ -4,7 +4,7 @@
 ## Features
 
 - **Upload Video**: Upload your video in MP4 format.
-- **Automatic Subtitle Generation**: SubtitleScribe automatically transcribes the audio and generates subtitles.
+- **Upload Audio**: Upload the extracted audio in MP3 format
 
 
 ## System Overview
